@@ -44,7 +44,7 @@ function fail(err) {
 
 // watchPositionで監視
 navigator.geolocation.watchPosition(success, fail, {
-    enableHighAccuracy: true,
+    enableHighAccuracy: false,
     maximumAge: 0,
-    timeout: 5000
+    timeout: 20000
 });
