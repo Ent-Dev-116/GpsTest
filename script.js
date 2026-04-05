@@ -42,9 +42,10 @@ function fail(err) {
     alert('位置情報の取得に失敗しました。エラーコード：' + err.code);
 }
 
-// watchPositionで監視
-navigator.geolocation.watchPosition(success, fail, {
-    enableHighAccuracy: true,
-    maximumAge: 0,
-    timeout: 10000
-});
+function startGPS() {
+    navigator.geolocation.watchPosition(success, fail, {
+        enableHighAccuracy: false,
+        timeout: 20000,
+        maximumAge: 5000
+    });
+}
