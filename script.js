@@ -9,7 +9,7 @@ function success(pos){
   }
 
   function fail(pos){
-    alert('位置情報の取得に失敗しました。エラーコード：');
+    alert('位置情報の取得に失敗しました。エラーコード：'+err.code);
   }
 
   navigator.geolocation.getCurrentPosition(success,fail);
